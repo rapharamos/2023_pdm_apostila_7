@@ -14,9 +14,10 @@ export default class App extends React.Component {
       params: {query: termo}
     })
     .then(result => {
-      // console.log(result.data.photos)
+      console.log(result.data.photos)
       this.setState({pics: result.data.photos})
     })
+    .catch(erro => console.log(erro))
   }
   // pexelsClient = null
   // onBuscaRealizada = (termo)  =>{
@@ -26,9 +27,9 @@ export default class App extends React.Component {
   //   .then(pics => this.setState({pics: pics.photos})) 
   // }
 
-  componentDidMount(){
-    this.pexelsClient = createClient(env.PEXELS_KEY)
-  }
+  // componentDidMount(){
+  //   this.pexelsClient = createClient(env.PEXELS_KEY)
+  // }
   render(){
     return (
       <div className='grid justify-content-center m-auto w-9 border-round border-1 border-400'>
