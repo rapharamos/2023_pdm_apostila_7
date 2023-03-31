@@ -2,10 +2,11 @@ import React from 'react'
 
 // props = {pic: "http..."}
 // operador de desestruturação
-const Imagem = ({pic}) => {
+const Imagem = ({pic, imgStyle}) => {
+  console.log(imgStyle)
   return (
-    <div>
-      <img src={pic} />
+    <div className={`${imgStyle} flex justify-content-center`}>
+      <img className='border-round'src={pic} />
     </div>
   )
 }
