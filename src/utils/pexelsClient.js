@@ -6,3 +6,5 @@ export default axios.create({
     Authorization: env.PEXELS_KEY
   }
 })
+
+console.log('Procurei no PEXELS!')
